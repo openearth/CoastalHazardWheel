@@ -66,8 +66,8 @@ service = Service(processes, ['pywps.cfg'])
 
 @app.route("/")
 def hello():
-    # server_url = pywps.configuration.get_config_value("server", "url")
-    server_url = 'blah'
+    server_url = pywps.configuration.get_config_value("server", "url")
+
     request_url = flask.request.url
     return flask.render_template('home.html', request_url=request_url,
                                  server_url=server_url,
