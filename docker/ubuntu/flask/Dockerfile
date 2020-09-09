@@ -6,7 +6,7 @@ MAINTAINER Jorge S. Mendes de Jesus <jorge.dejesus@protomail.com>
 ARG ROOTDIR=/usr/local/ 
 ARG GDAL_VERSION=2.4.0
 ARG PROCESSOR_N=8
-ARG FLASK_GIT=https://github.com/jorgejesus/pywps-flask.git
+ARG FLASK_GIT=https://github.com/FineWilms/pywps-flask.git
 ARG FLASK_BRANCH=pywps_4.2
 
 WORKDIR $ROOTDIR/
