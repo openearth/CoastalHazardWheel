@@ -6,8 +6,8 @@ MAINTAINER Jorge S. Mendes de Jesus <jorge.dejesus@protomail.com>
 ARG ROOTDIR=/usr/local/ 
 ARG GDAL_VERSION=2.4.0
 ARG PROCESSOR_N=8
-ARG FLASK_GIT=https://github.com/FineWilms/pywps-flask.git
-ARG FLASK_BRANCH=pywps_4.2
+ARG FLASK_GIT=https://github.com/openearth/CoastalHazardWheel.git
+ARG FLASK_BRANCH=master
 
 WORKDIR $ROOTDIR/
 
@@ -47,7 +47,7 @@ RUN cd src/ && tar -xvf gdal-$GDAL_VERSION.tar.gz && cd gdal-$GDAL_VERSION \
 
     
 WORKDIR /
-RUN git clone $FLASK_GIT -b $FLASK_BRANCH --single-branch 
+RUN git clone $FLASK_GIT -b $FLASK_BRANCH --single-branch pywps-flask
  
 WORKDIR /pywps-flask
 RUN pip3 install -r requirements.txt
